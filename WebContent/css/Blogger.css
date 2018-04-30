@@ -1,0 +1,307 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f5f4f2;
+}
+.clear{
+    clear: both;
+}
+.row{
+    position: relative;
+    width: 1090px;
+    margin: 0 auto;
+    /*background-color: lightblue;*/
+}
+.head,
+.head{
+    margin-top:30px;
+    font-size: 16px;
+}
+.head .heade{
+    height: 44px;
+}
+.head .head_left{
+    float: left;
+    height: 44px;
+    line-height: 44px;
+    /*background:red;*/
+}
+.head .head_right{
+    float: right;
+    height: 44px;
+    line-height: 44px;
+    /*background:red;*/
+}
+.head .head_right span{
+    margin-right: 20px  ;
+}
+.head .login_dl,.head .login_zc{
+    cursor: pointer;
+}
+.yanzhen{
+	padding: 100px;
+	padding-left: 300px;
+}
+.head .head_right .head_span_h{
+    width: 1px;
+    height: 16px;
+    line-height: 44px;
+    background-color: #ccc;
+    display: inline-block;
+}
+
+.head .split_line .split_line_up,.split_line_down{
+    margin-top: 5px;
+    border: 1px solid #000;
+}
+.head .head_search{
+    /*margin-top: 20px;*/
+    padding: 20px 0;
+    height: 55px;
+    /*margin-bottom: 20px;*/
+}
+
+.head .head_search .head_search_ss{
+    margin-left: 0px;
+    /*background-color: lightcoral;*/
+    font-size: 16px;
+    line-height: 44px;
+
+    float: left;
+}
+
+.head .head_search .head_search_ss .Blogger_Logo{
+    display: inline-block;
+    width: 128px;
+    height: 73px;
+    font-size: 24px;
+    font-weight: 800;
+    border: 2px solid #ccc;
+    border-bottom: none;
+    text-align: center;
+    background-color: #f26649;
+
+
+    line-height: 75px;
+    margin-right: 150px
+}
+
+
+.head .head_search .head_search_ss .head_search_ssText{
+    font-size: 19px;
+}
+.head .head_search .head_search_ss .head_search_ssInput{
+    width: 300px;
+    height: 44px;
+    font-size: 16px;
+    line-height: 44px;
+    text-indent: 1em;
+}
+.head .head_search .head_search_btn{
+    float: right;
+    margin-top: 20px;
+    margin-right: 100px;
+}
+
+.head .head_search .head_search_btn .head_search_btnSub,.head_search_btnBtn{
+    width: 80px;
+    height: 40px;
+    /*background-color: red;*/
+    margin-right: 15px;
+    border-radius: 8px;
+    outline: none;
+}
+.head .head_oul_all{
+    height: 330px;
+
+}
+.head .head_oul_all .head_oul{
+
+    float: left;
+}
+.head .head_oul_all .head_oul ul{
+    background-color: #f2b093;
+    width: 130px;
+    text-align: center;
+
+}
+.head .head_oul_all .head_oul ul li{
+    border: 2px solid #cccccc;
+    border-bottom: none;
+    width: 128px;
+    height: 44px;
+    line-height: 44px;
+    list-style: none;
+
+}
+.head .head_oul_all .head_oul ul li:nth-last-of-type(1){
+    border-bottom: 1px solid #000;
+}
+.head .headBigdiv{
+    display: inline-block;
+    width: 960px;
+    /*background-color: red;*/
+}
+.head .headBigdiv .head_bigdiv{
+    width: 938px;
+    letter-spacing:1px;//文字间隔
+    background-color: lawngreen;
+    margin-left: 2px;
+    border: 2px solid #ccc;
+    border-left: none;
+    text-indent: 1em;
+    padding:8px;
+    display: inline-block;
+}
+.head .headBigdiv .head_bigdiv ul li {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+.head .headBigdiv .head_bigdiv ul li a{
+    text-decoration: none;
+    color: black;
+}
+.head .headBigdiv .head_bigdiv ul li:nth-last-child(1){
+    margin-bottom: 8px;
+}
+.head .begin1{
+    display: none;
+}
+
+.cur_Blo_bgc{
+    background-color: #fff;
+}
+
+
+
+/*region 登录蒙版*/
+#mask_login{
+    width:100%;
+    height: 100%;
+    background-color: rgba(66,66,66,0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    display: none;
+}
+.mask_login{
+    position: absolute;
+    margin: 107px auto;
+    right: 130px;
+    top: 3px;
+}
+.login{
+    width: 360px;
+    height: 240px;
+    background-color: lightgreen;
+}
+.login .login_top{
+    background-color: #fff;
+    height: 44px;
+    line-height: 44px;
+    font-size: 18px;
+    text-align: center;
+}
+.login .login_cont{
+    /*background-color: mediumpurple;*/
+    text-align: center;
+}
+.login .login_acc,.login_pass{
+    margin-top: 5px;
+    font-size: 15px;
+}
+.login_pass{
+	margin-left: -78px;
+}
+.login .login_acc_text,.login_pass_text{
+    margin-top: 5px;
+    text-indent: 1em;
+    width: 160px;
+    height: 30px;
+    line-height: 30px;
+}
+.login .login_btu_come,.login .login_btu_out{
+    margin-top: 20px;
+    width: 50px;
+    height: 44px;
+    margin-left: 18px;
+    /*background-color: red;*/
+}
+/*endregion*/
+
+/* region 注册*/
+#mask_reg{
+    width:100%;
+    height: 100%;
+    background-color: rgba(66,66,66,0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    display: none;
+}
+.mask_reg{
+    position: absolute;
+    display: block;
+    margin: 107px auto;
+    right: 130px;
+    top: 3px;
+}
+.reg{
+    width: 300px;
+    height: 380px;
+    background-color: lightgreen;
+}
+.reg .reg_top{
+    background-color: #fff;
+    height: 44px;
+    line-height: 44px;
+    font-size: 18px;
+    text-align: center;
+}
+.reg .reg_cont{
+    /*background-color: mediumpurple;*/
+    text-align: center;
+}
+.reg .reg_acc,.reg_pass{
+    margin-top: 5px;
+    font-size: 15px;
+}
+.reg .reg_acc_text,.reg_pass_text,.reg_phone_text,.reg_Blogger_text,.reg_address_text{
+    margin-top: 5px;
+    text-indent: 1em;
+    width: 160px;
+    height: 30px;
+    line-height: 30px;
+}
+.reg .reg_btu_come,.reg .reg_btu_out{
+    margin-top: 14px;
+    width: 50px;
+    height: 44px;
+    margin-left: 18px;
+    /*background-color: red;*/
+}
+.reg .reg_Blogger .reg_Blogger_num,.reg .reg_phone .reg_phone_num{
+    margin-left: -19px;
+}
+.reg .reg_address .reg_address_num{
+    margin-left: -1px;
+}
+.reg .reg_sex .reg_sex_num{
+    margin-left: -100px;
+}
+.reg .reg_cont .reg_sex{
+    margin-top: 5px;
+}
+.reg .reg_phone,.reg .reg_Blogger{
+    margin-top: 6px;
+}
+
+	
+/* endregion*/
+
+

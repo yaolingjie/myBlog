@@ -1,0 +1,61 @@
+body{
+    background: #f5f4f2;
+}
+#book_top,#book_down{
+    width: 70%;
+    margin-top: 50px;
+    border: 1px solid #ccc;
+    text-indent: 2em;
+    padding: 10px;
+    position: relative;
+    left: 10%;
+}
+#book_top{
+    margin-top: 20px;
+}
+
+#foot_btn{
+    text-align: center;
+}
+#foot_btn button{
+    width: 70px;
+    height: 50px;
+    border-radius: 8px;
+    /*//元素周围的轮廓线*/
+    outline-color: #fff;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+#back_btn{
+
+}
+#back_btn .back_img{
+    position: relative;
+    margin-top: 30px;
+    left: 10%;
+    cursor: pointer;
+}
+.back_text{
+
+}
+.back_text p{
+
+    font-size: 18px;
+    font-weight: 800;
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+    left: -100px;
+    /*right: 0;*/
+}
+.back_text form textarea{
+    margin-top: 20px;
+    position: absolute;
+    left: 10.5%;
+}
+
+#foot_btn{
+    padding-top: 170px;
+    /*background-color: red;*/
+}

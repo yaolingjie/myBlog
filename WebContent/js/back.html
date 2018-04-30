@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #book_top,#book_down{
+            width: 70%;
+            margin-top: 50px;
+            border: 1px solid #ccc;
+            text-indent: 2em;
+            padding: 10px;
+            position: relative;
+            left: 10%;
+        }
+        #book_top{
+            margin-top: 50px;
+        }
+
+        #canvas{
+            /*border: 1px solid #000;*/
+            position: relative;
+            top: 40px;
+            left: 10%;
+
+        }
+        #foot_btn{
+            text-align: center;
+        }
+        #foot_btn button{
+            width: 70px;
+            height: 50px;
+            border-radius: 8px;
+            /*//元素周围的轮廓线*/
+            outline-color: #fff;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+<p> </p>
+<p> </p>
+<p> </p>
+<canvas id="canvas" width="100px" height="50px"></canvas>
+<div>
+
+    <div id="book_top">
+        在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。vvvv在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。vvvv在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。
+    </div>
+    <div id="book_down">
+        在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。vvvv在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标。在文档中点击某个位置。消息框会提示出指针相对于屏幕的 x 和 y 坐标
+    </div>
+</div>
+<div id="foot_btn">
+    <button>提交</button>
+    <button>清空</button>
+</div>
+
+<script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+    ctx.moveTo(5,10);
+    ctx.lineTo(60,10);
+    ctx.lineTo(75,25);
+    ctx.lineTo(60,35);
+    ctx.lineTo(5,35);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.beginPath();
+
+    ctx.font = "16px Georgia";
+    ctx.fillText("返回",23,28);
+    ctx.stroke();
+</script>
+
+</body>
+</html>

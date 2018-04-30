@@ -1,0 +1,37 @@
+body{
+    background: #f5f4f2;
+}
+#header{
+    text-align: center;
+}
+.headerText{
+    width: 360px;
+    height: 44px;
+    margin-top:  35px;
+    text-indent: 20px;
+    font-size: 30px;
+    /*background-color: red;*/
+}
+#content{
+    text-align: center;
+}
+#btn{
+    text-align: center;
+}
+.textarea{
+    width: 800px;
+    height: 400px;
+    margin-top: 20px;
+    font-size: 18px;
+    text-indent: 8px;
+}
+.sub,.back{
+    border-radius: 8px;
+    width: 50px;
+    height: 30px;
+    background-color: #c3e1f4;
+    margin-left: 50px;
+    margin-top: 20px;
+    /*//元素周围的轮廓线*/
+    outline-color: #fff;
+}

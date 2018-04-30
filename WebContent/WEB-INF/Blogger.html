@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/Blogger.css">
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div id="header">
+    <div class="head">
+        <div class="row">
+            <div class="heade">
+                    <div class="head_left">敲出人生巅峰</div>
+                    <div class="head_right">
+                        
+                        <% 
+                        	String userName = (String)session.getAttribute("userName");
+                        	String userPassword = (String)session.getAttribute("userPassword");
+                        	boolean b = userName == null || userPassword == null ? true : false;
+               				if(b == true){
+                        %>
+                        		<span class="login_dl">登录</span>
+                        	<span class="head_span_h"></span>
+                        	<span class="login_zc">注册</span>
+                        <% }else{
+                 		%>
+                 			<span >欢迎： <%=userName %></span>
+                 			<span class="head_span_h"></span>
+                        	<span><a href="closeUserName">注销</a></span>
+                        <%} %>
+                        	
+                    </div>
+            </div>
+            <div class="split_line">
+                    <div class="split_line_up"></div>
+                    <div class="split_line_down"></div>
+            </div>
+            <div class="head_search">
+                    <div class="head_search_ss">
+                        <span class="head_search_ssText">搜索：</span>
+                        <input type="text" class="head_search_ssInput" placeholder="请输入博客文章标题或博客名">
+                    </div>
+                    <div class="head_search_btn">
+                    <input type="submit" class="head_search_btnSub">
+                    <button class="head_search_btnBtn" onclick = "javascript:window.location.href='${pageContext.request.contextPath}/diary.jsp'">写文章</button>
+                </div>
+            </div>
+            <div class="head_oul_all">
+                <div class="head_oul">
+                    <ul id="oul">
+                        <li>java</li>
+                        <li>Oracle</li>
+                        <li>JavaScript</li>
+                        <li>Ajax</li>
+                        <li>jQuery</li>
+                        <li>Spring</li>
+                        <li>Mybatis</li>
+                    </ul>
+                </div>
+
+                <div class="first_show begin1">
+                    <div class="headBigdiv" >
+                        <div class="head_bigdiv">
+                        <ul style="list-style: none;">
+	                        <c:forEach items="${listJava}" var="list" >
+								<li><a href="show?version=${list.version}">${list.blogTittle}</a></li>	                           
+	                        </c:forEach>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="begin1">
+                    <div class="headBigdiv" >
+                        <div class="head_bigdiv">
+                        	<ul style="list-style: none;">
+		                        <c:forEach items="${listOracle}" var="list" >
+									<li><a href="show?version=${list.version}">${list.blogTittle}</a></li>	                           
+		                        </c:forEach>
+                        	</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="begin1">
+                    <div class="headBigdiv" >
+                        <div class="head_bigdiv">
+                        	<ul style="list-style: none;">
+		                        <c:forEach items="${listJS}" var="list" >
+									<li><a href="show?version=${list.version}">${list.blogTittle}</a></li>	                           
+		                        </c:forEach>
+                        	</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="begin1">
+                    <div class="headBigdiv" >
+                        <div class="head_bigdiv">
+                        	<ul style="list-style: none;">
+		                        <c:forEach items="${listAjax}" var="list" >
+									<li><a href="show?version=${list.version}">${list.blogTittle}</a></li>	                           
+		                        </c:forEach>
+                        	</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="begin1">
+                    <div class="headBigdiv" >
+                        <div class="head_bigdiv">
+                        	<ul style="list-style: none;">
+		                        <c:forEach items="${listjQuery}" var="list" >
+									<li><a href="show?version=${list.version}">${list.blogTittle}</a></li>	                           
+		                        </c:forEach>
+                        	</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="begin1">
+                    <div class="headBigdiv" >
+                        <div class="head_bigdiv">
+                        	<ul style="list-style: none;">
+		                        <c:forEach items="${listSpring}" var="list" >
+									<li><a href="show?version=${list.version}">${list.blogTittle}</a></li>	                           
+		                        </c:forEach>
+                        	</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="begin1">
+                    <div class="headBigdiv" >
+                        <div class="head_bigdiv">
+                        	<ul style="list-style: none;">
+		                        <c:forEach items="${listMybatis}" var="list" >
+									<li><a href="show?version=${list.version}">${list.blogTittle}</a></li>	                           
+		                        </c:forEach>
+                        	</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="content">
+
+</div>
+
+<!--登录蒙版-->
+<div id="mask_login">
+    <div class="mask_login">
+        <div class="login">
+            <div class="login_top">
+                <div>登录</div>
+            </div>
+            <div class="login_cont">
+                <form action="">
+                    <div class="login_acc">
+                    <div id="message"></div>
+                        <label>账号：</label>
+                        <input type="text" placeholder="请输入账号" class="login_acc_text" id="userName">
+                    </div>
+                    <div class="login_pass">
+                        <label>密码：</label>
+                        <input type="password" placeholder="请输入密码" class="login_pass_text" id="userPassword">
+                    </div>
+                    <div>
+                        <input type="submit" value="登录" class="login_btu_come" id="login">
+                        <input type="reset" value="清空" class="login_btu_out">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--注册蒙版-->
+<div id="mask_reg">
+    <div class="mask_reg">
+        <div class="reg">
+            <div class="reg_top">
+                <div>注册</div>
+            </div>
+            <div class="reg_cont">
+                <form action="">
+                    <div class="reg_acc">
+                        <label>账号：</label>
+                        <input type="text" placeholder="请输入账号" class="reg_acc_text" id="registerUserName">
+                        <div id="registerMessage"></div>
+                    </div>
+
+                    <div class="reg_pass">
+                        <label>密码：</label>
+                        <input type="password" placeholder="请输入密码" class="reg_pass_text" id="registerUserPassword">
+                    </div>
+
+                    <div class="reg_phone">
+                        <label class="reg_phone_num">手机号：</label>
+                        <input type="text" placeholder="请输入手机号" class="reg_phone_text" id="registerPhone">
+                    </div>
+
+                    <div class="reg_Blogger">
+                        <label class="reg_Blogger_num">博客名：</label>
+                        <input type="text" placeholder="请输入博客名" class="reg_Blogger_text" id="registerBlogName">
+                    </div>
+					<div class="reg_address">
+                        <label class="reg_address_num">地址：</label>
+                        <input type="text" placeholder="请输入地址" class="reg_address_text" id="registerAddress">
+                    </div>
+                    <div class="reg_sex">
+                        <label class="reg_sex_num">性别：</label>
+                        <input type="radio" value="男" name="sex" class="reg_sex_text">男
+                        <input type="radio" value="女" name="sex" class="reg_sex_text">女
+                    </div>
+                    <div>
+                        <input type="submit" value="注册" class="reg_btu_come" id="register">
+                        <input type="button" value="去登录" class="reg_btu_out login_dl">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<p>`</p>
+<script>
+//添加li的事件-->
+$(function () {
+    //给所有的li添加移入事件
+
+    $("#oul li").mouseover(function () {
+        //获取当前的li的索引
+        $(".begin1").css({
+            display:"none"
+        })
+        var index = $(this).index();
+        //获取全部的begin1
+        var begin = $(".begin1");
+        console.log(begin[index]);
+        $(begin[index]).css({
+            display:"inline-block"
+        })
+    })
+})
+
+    //点击登录蒙版事件
+    $(".login_dl").click(function () {
+        $("#mask_login").fadeIn(1);
+        $(".mask_login").fadeIn(1);
+        //补上消失的滚动条宽度
+        $("#header").css({
+            "marginRight":"17px"
+        });
+        $(".mask_login").css({
+            "marginRight":"17px"
+        });
+        document.body.style.overflow = 'hidden';
+        // $(document).scroll(function () {
+        //     $(document).scrollTop(0);
+        // })
+    });
+    //点击注册蒙版事件
+    $(".login_zc").click(function () {
+        // alert(1222);
+        $("#mask_reg").fadeIn(1);
+        $(".mask_reg").fadeIn(1);
+        $("#header").css({
+            "marginRight":"17px"
+        });
+        $(".mask_reg").css({
+            "marginRight":"17px"
+        });
+        document.body.style.overflow = 'hidden';
+    })
+
+//    监听鼠标点击事件
+    $("#mask_login").click(function () {
+        $("#mask_login").fadeOut();
+        // $(document).unbind("scroll");
+        $("#header").css({
+            "marginRight":0
+        })
+        $(".mask_login").css({
+            "marginRight":"0px"
+        })
+
+        document.body.style.overflow = 'scroll';
+    });
+    //阻止事件冒泡
+    $(".mask_login").click(function (e) {
+        e.stopPropagation();
+    })
+    //    监听鼠标点击事件
+    $("#mask_reg").click(function () {
+        $("#mask_reg").fadeOut();
+        //补上的宽度重新设置为0
+        $("#header").css({
+            "marginRight":0
+        })
+        $(".mask_reg").css({
+            "marginRight":"0px"
+        })
+        document.body.style.overflow = 'scroll';
+    });
+    //阻止事件冒泡
+    $(".mask_reg").click(function (e) {
+        e.stopPropagation();
+    });
+    
+	$("#login").click(function(){
+		var userName = $("#userName").val();
+		var userPassword = $("#userPassword").val();
+		var url="${pageContext.request.contextPath}/loginServlet";
+		var args= {"userName":userName, "userPassword":userPassword, "time":new Date()};
+		$.post(url, args, function(data){
+			alert(data);
+			var flag = data == "用户名密码正确" ? true : false;
+			if(flag){
+				window.location.href="http://localhost:8080/blog/index";				
+			}
+		});
+		return false;
+	});
+	$("#registerUserName").blur(function(){
+		var registerUserName = $("#registerUserName").val();
+		var url = "${pageContext.request.contextPath}/registerUserNameCheck";
+		var args = {"registerUserName" : registerUserName, "time" : new Date()};
+		$.post(url, args, function(data){
+			$("#registerMessage").html(data);			
+		});
+	});
+	
+	
+	$("#register").click(function(){
+		var registerUserName = $("#registerUserName").val();
+		var registerUserPassword = $("#registerUserPassword").val();
+		var registerPhone = $("#registerPhone").val();
+		var registerBlogName = $("#registerBlogName").val();
+		var registerMessage = $("#registerMessage").text();
+		var registerSex = $("input[name='sex']:checked").val();
+		var registerAddress = $("#registerAddress").val();
+		var url = "${pageContext.request.contextPath}/insertServlet";
+		var args = {"registerAddress" : registerAddress, "registerSex" : registerSex, "registerMessage" : registerMessage, "registerUserName" : registerUserName, "registerUserPassword" : registerUserPassword, "registerPhone" : registerPhone, "registerBlogName" : registerBlogName, "time" : new Date()};
+		if(registerUserName != "" && registerUserPassword != "" && registerPhone != "" && registerBlogName != "" && registerSex != "" && registerAddress != ""){			
+			$.post(url, args, function(jsonObject){
+				 if(jsonObject.success){
+			          $.messager.alert("系统提示","注册成功","info");
+			       }else{
+			          $.messager.alert("系统提示","注册失败","error");
+			       }
+			});
+		} else{
+			alert("注册失败。");
+			return false;
+		}
+	});
+
+</script>
+</body>
+</html>

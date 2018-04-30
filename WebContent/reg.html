@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reg</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #mask_reg{
+            width:100%;
+            height: 1000px;
+            background-color: #cccccc;
+            position: relative;
+        }
+        .mask_reg{
+            position: absolute;
+            margin: 50px auto;
+            right: 10%;
+        }
+        .reg{
+            width: 300px;
+            height: 280px;
+            background-color: lightgreen;
+        }
+        .reg .reg_top{
+            background-color: #fff;
+            height: 44px;
+            line-height: 44px;
+            font-size: 18px;
+            text-align: center;
+        }
+        .reg .reg_cont{
+            /*background-color: mediumpurple;*/
+            text-align: center;
+        }
+        .reg .reg_acc,.reg_pass{
+            margin-top: 5px;
+            font-size: 15px;
+        }
+        .reg .reg_acc_text,.reg_pass_text,.reg_phone_text,.reg_Blogger_text{
+            margin-top: 5px;
+            text-indent: 1em;
+            width: 160px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .reg .reg_btu_come,.reg .reg_btu_out{
+            margin-top: 14px;
+            width: 50px;
+            height: 44px;
+            margin-left: 18px;
+            /*background-color: red;*/
+        }
+        .reg .reg_Blogger .reg_Blogger_num,.reg .reg_phone .reg_phone_num{
+            margin-left: -19px;
+        }
+        .reg .reg_phone,.reg .reg_Blogger{
+            margin-top: 6px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="mask_reg">
+    <div class="mask_reg">
+        <div class="reg">
+            <div class="reg_top">
+                <div>注册</div>
+            </div>
+            <div class="reg_cont">
+                <form action="">
+                    <div class="reg_acc">
+                        <label>账号：</label>
+                        <input type="text" placeholder="请输入账号" class="reg_acc_text">
+                    </div>
+                    
+                    <div class="reg_pass">
+                        <label>密码：</label>
+                        <input type="password" placeholder="请输入密码" class="reg_pass_text">
+                    </div>
+                    
+                    <div class="reg_phone">
+                        <label class="reg_phone_num">手机号：</label>
+                        <input type="text" placeholder="请输入手机号" class="reg_phone_text">
+                    </div>
+                    
+                    <div class="reg_Blogger">
+                        <label class="reg_Blogger_num">博客名：</label>
+                        <input type="text" placeholder="请输入博客名" class="reg_Blogger_text">
+                    </div>
+					<div class="reg_address">
+                        <label class="reg_address_num">地址：</label>
+                        <input type="text" placeholder="请输入地址" class="reg_address_text" id="registerAddress">
+                    </div>
+                    <div class="reg_sex">
+                        <label class="reg_sex_num">性别：</label>
+                        <input type="radio" value="男" name="sex" class="reg_sex_text">男
+                        <input type="radio" value="女" name="sex" class="reg_sex_text">女
+                    </div>
+                    
+                    <div>
+                        <input type="submit" value="注册" class="reg_btu_come">
+                        <input type="submit" value="去登录" class="reg_btu_out">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

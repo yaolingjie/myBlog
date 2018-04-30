@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/back.css">
+</head>
+<body>
+<div id="back_btn">
+    <a href="${pageContext.servletContext.contextPath}/index"><img src="images/back.jpg" alt="返回按钮" class="back_img"></a>
+</div>
+<div>
+	<input type="text" disabled="disabled" value="${blog.blogTittle}" style="margin-left: 500px;background-color: white;">
+    <div id="book_top">
+    	${blog.blogBody}
+    </div>
+    <div id="book_down">
+    	<ul style="list-style: none">
+			<c:forEach items="${commentList}" var="list" varStatus="status">
+				<li>第${status.index + 1}楼</li>
+				<li>${list.userName}</li>
+				<li>${list.comment}</li>
+				
+			</c:forEach>
+    	</ul>
+    </div>
+    <form action="${pageContext.servletContext.contextPath}/comment" method="post">
+    	<input type="hidden" value="${blog.version}" name="version">
+		    <textarea rows="10" cols="130" name="comment"></textarea>
+		</div>
+		<div id="foot_btn">
+		    <button type="submit">提交</button>
+		    <button>清空</button>
+		</div>
+    </form>
+
+
+
+</body>
+</html>
